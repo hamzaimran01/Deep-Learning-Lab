@@ -215,12 +215,7 @@ def FCN_Seg(self, is_training=True):
 
 
         
-        End_maps_decoder1 = slim.conv2d(current_up3, self.N_classes, [1, 1], scope='Final_decoder') #(batchsize, width, height, N_classes)
         
-        Reshaped_map = tf.reshape(End_maps_decoder1, (-1, self.N_classes))
-
-        print("End map size Decoder: ")
-        print(Reshaped_map)
 
 
     # Configuration 3 - Two upsampling layer plus skip connection
